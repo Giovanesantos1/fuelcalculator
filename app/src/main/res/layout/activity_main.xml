@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:hint="Preço do combustível Ex: 1.50"
         android:layout_margin="16dp"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_subtitle" />
@@ -36,6 +37,7 @@
         android:layout_height="wrap_content"
         android:hint="Consumo do carro Ex: 5km/l"
         android:layout_margin="16dp"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_preço" />
@@ -46,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:hint="Distancia até o destino Ex: 2km"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_consumo" />
