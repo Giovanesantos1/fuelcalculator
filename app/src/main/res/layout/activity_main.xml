@@ -7,14 +7,27 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/iv_tela_inicial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_tela_inicial"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Calculadora de gastos de combustível"
-        android:textSize="20dp"
+        android:textSize="32dp"
         android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,23 +37,54 @@
         android:id="@+id/edt_preço"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
         android:hint="Preço do combustível Ex: 1.50"
-        android:layout_margin="16dp"
+        android:textSize="20dp"
         android:inputType="numberDecimal"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_subtitle" />
+
+    <ImageView
+        android:id="@+id/ic_valor"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_valor"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_preço"
+        app:layout_constraintEnd_toEndOf="@+id/edt_preço"
+        app:layout_constraintTop_toTopOf="@+id/edt_preço"
+        app:tint="@color/white" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edt_consumo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Consumo do carro Ex: 5km/l"
+        android:textSize="20dp"
         android:layout_margin="16dp"
         android:inputType="numberDecimal"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_preço" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_consumo"
+        android:layout_marginEnd="16dp"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_consumo"
+        app:layout_constraintEnd_toEndOf="@+id/edt_consumo"
+        app:layout_constraintTop_toTopOf="@+id/edt_consumo" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edt_distancia"
@@ -48,10 +92,25 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:hint="Distancia até o destino Ex: 2km"
+        android:textSize="20dp"
         android:inputType="numberDecimal"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_consumo" />
+
+    <ImageView
+        android:id="@+id/ic_km"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_km"
+        android:layout_marginEnd="16dp"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_distancia"
+        app:layout_constraintEnd_toEndOf="@+id/edt_distancia"
+        app:layout_constraintTop_toTopOf="@+id/edt_distancia" />
 
     <Button
         android:id="@+id/btn_calcular"
